@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import brandLogo from '../../../assests/icons/logo.png'
 import {
     BookmarkAltIcon,
     CalendarIcon,
@@ -81,7 +82,7 @@ export default function Navbar() {
                                     <span className="sr-only">Workflow</span>
                                     <img
                                         className="h-8 w-auto sm:h-10"
-                                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                        src={brandLogo}
                                         alt=""
                                     />
                                 </a>
@@ -210,7 +211,7 @@ export default function Navbar() {
                                         </div>
                                     </div>
                                     <div className="mt-6">
-                                        <nav className="grid gap-y-8">
+                                        <nav className="grid gap-y-8 z-0">
                                             {solutions.map((item) => (
                                                 <a
                                                     key={item.name}

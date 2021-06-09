@@ -10,7 +10,7 @@ const Banner = () => {
     return (
         <div className="container">
             <div class="bg-cover border-4 bg-no-repeat bg-center py-20 mt-12" style={imgStyle}>
-                <div class="">
+                <div class="ml-10">
                     <h1 class="text-6xl text-gray-800 font-medium mb-4 capitalize">
                         best collection for <br /> home decoration
                     </h1>
@@ -20,7 +20,7 @@ const Banner = () => {
                     </p>
                     <div class="mt-12">
                         <a href="/"
-                            class="bg-primary border border-primary text-white px-8 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary transition">
+                            class="bg-primary border border-primary text-white px-8 py-3 font-medium rounded-md hover:bg-white hover:text-red-800 transition">
                             Shop Now</a>
                     </div>
                 </div>
