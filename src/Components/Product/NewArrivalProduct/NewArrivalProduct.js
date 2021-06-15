@@ -8,7 +8,7 @@ const NewArrivalProduct = ({ product }) => {
         <>
             <div class="bg-white shadow rounded overflow-hidden group">
                 <div class="relative">
-                    <img src={img} class="product_img" alt="product_img" />
+                    <img src={img} class="h-72 w-auto " alt="product_img" />
                     <div
                         class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
                         <a href="/"
@@ -43,7 +43,7 @@ const NewArrivalProduct = ({ product }) => {
                         <div class="text-xs text-gray-500 ml-3">(150)</div>
                     </div>
                 </div>
-                <a href="/" class="block w-full py-1 text-center text-white bg-red-800 border border-primary rounded-b hover:bg-transparent hover:text-red-800 transition">
+                <a href="/" class="block w-full py-1 text-center text-white bg-yellow-700 border border-primary rounded-b hover:bg-yellow-200 hover:text-red-800 transition duration-500 ease-in-out transform ">
                     Add to cart
                 </a>
             </div>

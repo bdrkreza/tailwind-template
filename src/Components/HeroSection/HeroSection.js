@@ -1,49 +1,35 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, {
+    Autoplay, Pagination, Navigation
+} from 'swiper/core';
+import 'swiper/swiper-bundle.min.css';
+import { sliderImg } from '../../assests/Data/sliderImg';
+import HeroSectionCard from './HeroSectionCard';
 
-import slider3 from '../../assests/images/slider/slider3.png'
-export default function HeroSection() {
+
+SwiperCore.use([Autoplay, Pagination, Navigation]);
+const HeroSection = () => {
     return (
-        <div className="relative bg-white mt-12 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                    <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 ">
-                        <div className="sm:text-center lg:text-left">
-                            <h1 className="text-4xl tracking-tight font-normal text-gray-900 sm:text-5xl md:text-6xl">
-                                <span>Great Design Collection</span>
-                                <span className="block text-indigo-400">Cloth Covered Accent Chair</span>
-                            </h1>
-                            <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                                fugiat veniam occaecat fugiat aliqua.
-              </p>
-                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div className="rounded-md shadow">
-                                    <a
-                                        href="\"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                                    >
-                                        Add to Card
-                                </a>
-                                </div>
-                                <div className="mt-3 sm:mt-0 sm:ml-3">
-                                    <a
-                                        href="/"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-                                    >
-                                        More Info
-                                 </a>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-            </div>
-            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img
-                    className="h-30 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                    src={slider3}
-                    alt=""
-                />
-            </div>
+        <div>
+            <Swiper
+                spaceBetween={30} centeredSlides={true} autoplay={{
+                    "delay": 2500,
+                    "disableOnInteraction": false
+                }} pagination={{
+                    "clickable": true
+                }} navigation={true} className="swiper-slide"
+            >
+                {sliderImg.map((product) => {
+                    return (
+                        <SwiperSlide key={product.id}>
+                            <HeroSectionCard product={product} />
+                        </SwiperSlide>
+                    );
+                })}
+            </Swiper>
         </div>
-    )
-}
+    );
+};
+
+export default HeroSection;

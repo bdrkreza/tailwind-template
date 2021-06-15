@@ -17,11 +17,14 @@ const BlogSection = () => {
                                     <img src={data.img} class="w-full" />
                                     <div class="single-blog-img-overlay"></div>
                                 </div>
-                                <div className=" bg-gradient-to-b from-yellow-100 to-red-100 py-1 mt-3 rounded-lg">
-                                    <h1 className="text-xl bold text-blue-800 mt-3">{data.title}</h1>
+                                <div className=" bg-gradient-to-b from-gray-500 to-white-100 py-1 mt-3 mb-5 rounded-lg">
+                                    <h1 className="text-xl bold text-gray-900 mt-3">{data.title}</h1>
                                     <h4 className="text-black mt-1">{data.date}</h4>
                                     <p className="mt-2">{data.describe}</p>
                                 </div>
+                                <a href="/" class="bg-white transition duration-500 ease-in-out transform  mt-12 ml-60 hover:bg-yellow-600 text-gray-800 font-semibold py-2 px-6 border border-gray-400 rounded shadow">
+                                    Read More
+                                </a>
                             </div>
 
                         )

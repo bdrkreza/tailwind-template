@@ -1,7 +1,8 @@
-import feature1 from '../images/features/f1.jpg'
-import feature2 from '../images/features/f2.jpg'
-import feature3 from '../images/features/f3.jpg'
-import feature4 from '../images/features/f4.jpg'
+import feature1 from '../images/features/fproduct1.jpg'
+import feature2 from '../images/features/fproduct2.jpg'
+import feature3 from '../images/features/fproduct3.jpg'
+import feature4 from '../images/features/fproduct4.jpg'
+import feature5 from '../images/features/fproduct5.jpg'
 
 export const fProducts = [
     {
@@ -19,6 +20,10 @@ export const fProducts = [
 
     }, {
         img: feature4,
+        title: 'Modern Arm Chair',
+        price: 299,
+    }, {
+        img: feature5,
         title: 'Modern Arm Chair',
         price: 299,
     }

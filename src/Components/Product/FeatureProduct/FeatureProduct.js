@@ -9,7 +9,7 @@ const FeatureProduct = () => {
             <div class="container py-16 px-10">
                 <h2 class="text-3xl font-medium text-gray-800 uppercase text-center mb-6">Feature Product</h2>
 
-                <div class="grid grid-cols-4 gap-3">
+                <div class="grid grid-cols-3 gap-3">
 
                     {
                         fProducts.map((data) =>
@@ -24,7 +24,7 @@ const FeatureProduct = () => {
                                     </a>
                                     <div class="flex items-baseline mb-1 space-x-2 font-roboto">
                                         <p class="text-xl text-primary font-semibold">${data.price}</p>
-                                        <p class="text-sm text-gray-400 line-through">$55.00</p>
+                                        {/* <p class="text-sm text-gray-400 line-through">$55.00</p> */}
                                     </div>
                                     <div class="flex items-center">
                                         <div class="flex gap-1 text-sm text-yellow-400">
@@ -39,9 +39,6 @@ const FeatureProduct = () => {
                                         <div class="text-xs text-gray-500 ml-3">(150)</div>
                                     </div>
                                 </div>
-                                <a href="/" class="block w-full py-1 text-center text-white bg-red-800 border border-primary rounded-b hover:bg-transparent hover:text-red-800 transition">
-                                    Add to cart
-                </a>
                             </div>
 
                         )
