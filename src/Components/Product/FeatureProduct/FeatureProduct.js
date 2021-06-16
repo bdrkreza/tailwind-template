@@ -1,9 +1,10 @@
 import React from 'react';
-import { fProducts } from '../../../assests/Data/featureProduct';
+
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fProductData } from '../../../assests/Data/fProductData';
 
-const FeatureProduct = () => {
+const FeatureProducts = () => {
     return (
         <div>
             <div class="container py-16 px-10">
@@ -12,7 +13,7 @@ const FeatureProduct = () => {
                 <div class="grid grid-cols-3 gap-3">
 
                     {
-                        fProducts.map((data) =>
+                        fProductData.map((data) =>
                             <div className="text-center">
                                 <div class="relative group rounded-2xl overflow-hidden inner single-blog">
                                     <img src={data.img} class="w-full rounded-2xl" alt="featureImg" />
@@ -49,4 +50,4 @@ const FeatureProduct = () => {
     );
 };
 
-export default FeatureProduct;
+export default FeatureProducts;

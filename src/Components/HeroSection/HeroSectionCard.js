@@ -1,5 +1,5 @@
 import React from 'react';
-import { products } from '../../assests/Data/product';
+import { products } from '../../assests/Data/productData';
 import imgs from '../../assests/images/slider/banner-bg.jpg'
 
 const HeroSectionCard = ({ product }) => {

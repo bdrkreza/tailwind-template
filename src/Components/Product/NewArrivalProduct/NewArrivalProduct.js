@@ -2,8 +2,9 @@ import React from 'react';
 import { faSearch, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './NewArrivalProduct.css'
-const NewArrivalProduct = ({ product }) => {
-    const { price, name, img } = product
+import { Link } from 'react-router-dom';
+const NewArrivalProduct = ({ productData }) => {
+    const { price, name, img } = productData;
     return (
         <>
             <div class="bg-white shadow rounded overflow-hidden group">
@@ -11,10 +12,10 @@ const NewArrivalProduct = ({ product }) => {
                     <img src={img} class="h-72 w-auto " alt="product_img" />
                     <div
                         class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                        <a href="/"
+                        <Link to="/view"
                             class="text-white text-lg w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
                             <FontAwesomeIcon size="2x" icon={faSearch} />
-                        </a>
+                        </Link>
                         <a href="/"
                             class="text-white text-lg w-12 h-12 rounded-full ml-3 bg-primary flex items-center justify-center hover:bg-gray-800 transition">
                             <i class="far fa-heart"></i>

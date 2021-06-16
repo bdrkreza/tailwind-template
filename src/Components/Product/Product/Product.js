@@ -1,5 +1,6 @@
 import React from 'react';
-import { products } from '../../../assests/Data/product';
+import { NewProduct } from '../../../assests/Data/productData';
+
 import NewArrivalProduct from '../NewArrivalProduct/NewArrivalProduct';
 
 const Product = () => {
@@ -11,7 +12,7 @@ const Product = () => {
 
                 <div className="grid grid-cols-3 gap-12">
                     {
-                        products.map((product) => <NewArrivalProduct product={product} />)
+                        NewProduct.map((product) => <NewArrivalProduct productData={product} />)
                     }
                 </div>
 

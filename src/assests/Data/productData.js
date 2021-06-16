@@ -9,7 +9,7 @@ import arrival8 from '../images/populer-products/product-8.jpg'
 
 
 
-export const products = [
+export const NewProduct = [
     {
         img: arrival1,
         name: 'Single Armchair',

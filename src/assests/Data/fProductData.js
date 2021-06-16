@@ -4,7 +4,7 @@ import feature3 from '../images/features/fproduct3.jpg'
 import feature4 from '../images/features/fproduct4.jpg'
 import feature5 from '../images/features/fproduct5.jpg'
 
-export const fProducts = [
+export const fProductData = [
     {
         img: feature1,
         title: 'Designed Sofa',

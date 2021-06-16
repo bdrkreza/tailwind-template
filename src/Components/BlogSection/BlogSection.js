@@ -17,7 +17,7 @@ const BlogSection = () => {
                                     <img src={data.img} class="w-full" />
                                     <div class="single-blog-img-overlay"></div>
                                 </div>
-                                <div className=" bg-gradient-to-b from-gray-500 to-white-100 py-1 mt-3 mb-5 rounded-lg">
+                                <div className=" bg-gradient-to-b from-blue-200 to-white-100 py-1 mt-3 mb-5 rounded-lg">
                                     <h1 className="text-xl bold text-gray-900 mt-3">{data.title}</h1>
                                     <h4 className="text-black mt-1">{data.date}</h4>
                                     <p className="mt-2">{data.describe}</p>
