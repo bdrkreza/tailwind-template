@@ -1,7 +1,7 @@
 import React from 'react';
-import delivery from '../../assests/icons/delivery-van.svg'
-import moneyBack from '../../assests/icons/money-back.svg'
-import service from '../../assests/icons/service-hours.svg'
+import delivery from '../../assets/icons/delivery-van.svg'
+import moneyBack from '../../assets/icons/money-back.svg'
+import service from '../../assets/icons/service-hours.svg'
 const FeatureSection = () => {
     return (
         <div>

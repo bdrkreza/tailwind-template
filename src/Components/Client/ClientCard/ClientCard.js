@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ClientCard = ({ data }) => {
-    console.log(data)
     return (
         <div>
             <section class="mx-auto ">

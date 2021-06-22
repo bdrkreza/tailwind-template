@@ -2,7 +2,7 @@ import React from 'react';
 
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fProductData } from '../../../assests/Data/fProductData';
+import { fProductData } from '../../../assets/Data/fProductData';
 
 const FeatureProducts = () => {
     return (

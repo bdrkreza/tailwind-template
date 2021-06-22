@@ -1,7 +1,7 @@
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import imageUrl from '../../assests/images/image/blog-1.jpg'
+import imageUrl from '../../assets/images/image/blog-1.jpg'
 const Subscribe = () => {
     return (
         <>

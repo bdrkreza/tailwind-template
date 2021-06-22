@@ -11,34 +11,42 @@ import arrival8 from '../images/populer-products/product-8.jpg'
 
 export const NewProduct = [
     {
+        id: 1,
         img: arrival1,
         name: 'Single Armchair',
         price: 200,
     }, {
+        id: 2,
         img: arrival2,
         name: 'Wooden Chair',
         price: 300,
     }, {
+        id: 3,
         img: arrival3,
         name: 'Wooden Armchair',
         price: 300,
     }, {
+        id: 4,
         img: arrival4,
         name: 'Stylish Chair',
         price: 300,
     }, {
+        id: 5,
         img: arrival5,
         name: 'Modern Chair',
         price: 300,
     }, {
+        id: 6,
         img: arrival6,
         name: 'Mapple Wood Dinning Table',
         price: 300,
     }, {
+        id: 7,
         img: arrival7,
         name: 'Arm Chair',
         price: 300,
     }, {
+        id: 8,
         img: arrival8,
         name: 'Wooden Bed',
         price: 300,

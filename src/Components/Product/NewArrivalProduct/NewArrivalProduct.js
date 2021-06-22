@@ -1,10 +1,14 @@
 import React from 'react';
 import { faSearch, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './NewArrivalProduct.css'
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCard } from '../../../Redux/Action/Action';
+
+
 const NewArrivalProduct = ({ productData }) => {
-    const { price, name, img } = productData;
+    const { price, name, img, id } = productData;
+    const dispatch = useDispatch();
     return (
         <>
             <div class="bg-white shadow rounded overflow-hidden group">
@@ -12,7 +16,7 @@ const NewArrivalProduct = ({ productData }) => {
                     <img src={img} class="h-72 w-auto " alt="product_img" />
                     <div
                         class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                        <Link to="/view"
+                        <Link to={`/productView/${id}`}
                             class="text-white text-lg w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
                             <FontAwesomeIcon size="2x" icon={faSearch} />
                         </Link>
@@ -44,9 +48,9 @@ const NewArrivalProduct = ({ productData }) => {
                         <div class="text-xs text-gray-500 ml-3">(150)</div>
                     </div>
                 </div>
-                <a href="/" class="block w-full py-1 text-center text-white bg-yellow-700 border border-primary rounded-b hover:bg-yellow-200 hover:text-red-800 transition duration-500 ease-in-out transform ">
+                <button onClick={() => dispatch(addToCard(productData))} class="block w-full py-1 text-center text-white bg-yellow-700 border border-primary rounded-b hover:bg-yellow-200 hover:text-red-800 transition duration-500 ease-in-out transform ">
                     Add to cart
-                </a>
+                </button>
             </div>
         </>
     );

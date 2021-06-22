@@ -1,5 +1,5 @@
 import React from 'react';
-import { testimonialData } from '../../../assests/Data/testimonialData';
+import { testimonialData } from '../../../assets/Data/testimonialData';
 import Subscribe from '../../Subscribe/Subscribe';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
 import { Swiper, SwiperSlide } from 'swiper/react';

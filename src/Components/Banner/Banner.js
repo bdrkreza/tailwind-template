@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from '../../assests/images/collection/sofa1.jpg'
+import bannerImg from '../../assets/images/collection/sofa1.jpg'
 
 
 const imgStyle = {

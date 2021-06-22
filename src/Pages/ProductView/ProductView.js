@@ -1,7 +1,20 @@
 import React from 'react';
-import img from '../../assests/images/collection/arrivals1.png'
-import img1 from '../../assests/images/collection/arrivals2.png'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import img from '../../assets/images/collection/arrivals1.png'
+import img1 from '../../assets/images/collection/arrivals2.png'
+
 const ProductView = () => {
+
+    const { Id } = useParams();
+    const dispatch = useDispatch();
+    const product = useSelector(state => state.product.productData);
+    console.log(product)
+
+    useEffect(() => {
+        dispatch({ type: 'PRODUCT', Id })
+    }, [Id])
     return (
         <div>
             <section class="text-blueGray-700 ">

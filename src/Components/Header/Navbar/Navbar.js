@@ -2,8 +2,12 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
-import brandLogo from '../../../assests/icons/logo-white.png'
+import brandLogo from '../../../assets/icons/logo-white.png'
 import { Link } from 'react-router-dom'
+import ShoppingCard from '../../ShoppingCard/ShoppingCard'
+import { useSelector } from 'react-redux'
+
+
 
 const navigation = [
     { name: 'Home', href: '/home', current: true },
@@ -18,8 +22,9 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+    const product = useSelector(state => state.product.singleProduct)
     return (
-        <Disclosure as="nav" className="bg-gray-800 sticky">
+        <Disclosure as="nav" className="bg-gray-800 ">
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -72,7 +77,6 @@ export default function Navbar() {
                                     <span className="sr-only">View notifications</span>
                                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                                 </button>
-
 
 
                                 {/* Profile dropdown */}
@@ -147,12 +151,55 @@ export default function Navbar() {
                                         </>
                                     )}
                                 </Menu>
+
+                                <Link to="dashboard">
+                                    <h1>dashboard</h1>
+                                </Link>
+
+
+                                <Menu as="div" className="ml-3 relative">
+                                    {({ open }) => (
+                                        <>
+                                            <div>
+                                                <Menu.Button className="bg-gray-800 flex text-sm ml-10 text-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+
+                                                    <span className="sr-only"></span>
+
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 relative" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                                        </svg>
+                                                    </div>
+                                                    <span className="absolute h-20 w-10 mt-2 text-2xl text-red-500">{product.length}</span>
+
+                                                </Menu.Button>
+                                            </div>
+                                            <Transition
+                                                show={open}
+                                                as={Fragment}
+                                                enter="transition ease-out duration-100"
+                                                enterFrom="transform opacity-0 scale-95"
+                                                enterTo="transform opacity-100 scale-100"
+                                                leave="transition ease-in duration-75"
+                                                leaveFrom="transform opacity-100 scale-100"
+                                                leaveTo="transform opacity-0 scale-95"
+                                            >
+
+                                                <Menu.Items
+                                                    static
+                                                    className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                                >
+                                                    <ShoppingCard />
+                                                </Menu.Items>
+                                            </Transition>
+                                        </>
+                                    )}
+                                </Menu>
+
+
                             </div>
                         </div>
                     </div>
-
-
-
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1">
@@ -172,7 +219,8 @@ export default function Navbar() {
                         </div>
                     </Disclosure.Panel>
                 </>
-            )}
-        </Disclosure>
+            )
+            }
+        </Disclosure >
     )
 }

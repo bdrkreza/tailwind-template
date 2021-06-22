@@ -1,9 +1,12 @@
 import React from 'react';
-import { NewProduct } from '../../../assests/Data/productData';
-
+import { useSelector } from 'react-redux';
+import { NewProduct } from '../../../assets/Data/productData';
 import NewArrivalProduct from '../NewArrivalProduct/NewArrivalProduct';
 
 const Product = () => {
+    const products = useSelector(state => {
+        return state.product.productData;
+    });
     return (
         <div>
 
@@ -12,7 +15,7 @@ const Product = () => {
 
                 <div className="grid grid-cols-3 gap-12">
                     {
-                        NewProduct.map((product) => <NewArrivalProduct productData={product} />)
+                        products.map((product) => <NewArrivalProduct productData={product} />)
                     }
                 </div>
 

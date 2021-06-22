@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../assests/icons/logo-white.png'
-import brandIcon from '../../assests/icons/methods.png'
+import logo from '../../assets/icons/logo-white.png'
+import brandIcon from '../../assets/icons/methods.png'
 const Footer = () => {
     return (
         <div>

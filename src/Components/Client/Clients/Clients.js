@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 
 import 'swiper/swiper-bundle.min.css';
-import { client } from '../../../assests/Data/ClientData';
+import { client } from '../../../assets/Data/ClientData';
 import ClientCard from '../ClientCard/ClientCard';
 
 SwiperCore.use([Navigation]);

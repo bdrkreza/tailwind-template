@@ -4,7 +4,7 @@ import SwiperCore, {
     Autoplay, Pagination, Navigation
 } from 'swiper/core';
 import 'swiper/swiper-bundle.min.css';
-import { sliderImg } from '../../assests/Data/sliderImg';
+import { sliderImg } from '../../assets/Data/sliderImg';
 import HeroSectionCard from './HeroSectionCard';
 
 

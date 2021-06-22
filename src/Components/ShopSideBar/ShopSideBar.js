@@ -4,9 +4,9 @@ import Product from '../Product/Product/Product';
 const ShopSideBar = () => {
     return (
         <>
-            <div class="container px-10 flex-col mb-10 w-full md:flex md:flex-row md:min-h-screen bg-gray-100">
-                <div class="flex flex-col flex-shrink-0 w-full bg-white shadow-xl text-gray-700 bg-white md:w-64">
-                    <div class="col-span-1 bg-gray-100 px-4 pb-6 shadow rounded overflow-hidden">
+            <div class="container px-10 flex-col mb-10 w-full md:flex md:flex-row md:min-h-screen bg-gray-100  ">
+                <div class="flex flex-col flex-shrink-0 w-full bg-white shadow-xl text-gray-700 bg-white md:w-64 ">
+                    <div class="col-span-1 bg-gray-100 px-4 pb-6 shadow rounded overflow-hidden ">
                         <div class="divide-y divide-gray-200 space-y-5">
 
                             <div>

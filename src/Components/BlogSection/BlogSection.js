@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogSection.css'
-import { blog } from '../../assests/Data/blogData';
+import { blog } from '../../assets/Data/blogData';
 
 const BlogSection = () => {
     return (
